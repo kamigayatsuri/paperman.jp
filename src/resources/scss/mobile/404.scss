@@ -1,0 +1,18 @@
+@media only screen and (max-width: 500px) {
+  #bug-trap-404-modal .modal-content {
+    max-width: 501px;
+  }
+
+  #bug-trap-404-modal #content-messages {
+    max-width: 495px;
+  }
+
+  #bug-trap-404-modal #content-buttons {
+    max-height: 64px;
+  }
+
+  #bug-trap-404-modal button {
+    max-width: 76px;
+    width: 100%;
+  }
+}

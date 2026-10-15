@@ -1,0 +1,134 @@
+#bug-trap-404-modal .modal-content {
+  border: none !important;; /* モーダルの枠線を消す */
+  box-shadow: none !important;; /* モーダルの影を消す */
+}
+
+#bug-trap-404-modal .modal-dialog {
+  border: none !important;; /* モーダルの枠線を消す */
+  box-shadow: none !important;; /* モーダルの影を消す */
+}
+
+#bug-trap-404-modal #title-bar {
+  border: 1px solid #fb9f32;
+  height: 24px;
+}
+
+#bug-trap-404-modal #title-bar-content {
+  height: 24px;
+  width: 100%;
+  background-color: #fb9f32;
+}
+
+#bug-trap-404-modal #title-bar-close {
+  border-radius: 0;
+  height: 20px;
+  width: 32px;
+  line-height: 0.8;
+}
+
+#bug-trap-404-modal #content {
+  border: 3px solid #fb9f32;
+}
+
+#content-messages {
+  border-bottom: 1px solid #a0a0a0;
+  font-size: 9pt;
+  line-height: 1.15;
+}
+
+#content-detail {
+  background-color: #f0f0f0;
+}
+
+#bug-trap-404-modal button {
+  border-radius: 0;
+  font-size: 9pt;
+}
+
+#content-detail fieldset {
+  font-size: x-small;
+  border: 1px solid #ccc; /* 枠線の設定 */
+  padding: 0.5rem; /* 内側のパディング */
+}
+
+#content-detail fieldset::before {
+  content: ''; /* 空のコンテンツを指定 */
+  position: absolute; /* 絶対位置決め */
+  top: -2px; /* 上にずらす */
+  left: -2px; /* 左にずらす */
+  right: -2px; /* 右にずらす */
+  bottom: -2px; /* 下にずらす */
+  border: 1px solid #000; /* 凹んだ線の色 */
+  box-shadow: inset 0 0 0 1px #fff; /* 内側に白い線を追加して凹みを強調 */
+  pointer-events: none; /* 擬似要素がクリックなどのイベントを受け取らないようにする */
+  z-index: -1; /* 元の `fieldset` の下に配置 */
+}
+
+#bug-trap-404-modal #registers {
+  overflow-x: hidden;
+}
+
+#bug-trap-404-modal #stack-trace {
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+#bug-trap-404-modal legend {
+  font-size: x-small;
+  float: none;
+  padding: 0; /* legend の左右にパディングを追加 */
+  width: auto;
+}
+#bug-trap-404-modal table {
+  background-color: #f0f0f0;
+  font-size: 9pt;
+}
+#bug-trap-404-modal table thead tr th {
+  background-color: #f0f0f0;
+  font-size: 9pt;
+  padding: 0;
+}
+#bug-trap-404-modal table tbody tr td {
+  background-color: #fff;
+  font-size: 9pt;
+  font-weight: normal;
+  padding: 0;
+}
+
+#bug-trap-404-modal .bg-gray {
+  background-color: #f0f0f0;
+}
+
+@media only screen and (min-width: 501px) {
+  #bug-trap-404-modal .modal-content {
+    width: 501px;
+  }
+
+  #bug-trap-404-modal #content-messages {
+    width: 495px;
+  }
+
+  #bug-trap-404-modal #content-buttons {
+    height: 64px;
+  }
+
+  #content-detail {
+    height: 390px;
+  }
+
+  #bug-trap-404-modal button {
+    width: 76px;
+  }
+
+  #bug-trap-404-modal #exception-reason {
+    height: 7rem;
+  }
+
+  #bug-trap-404-modal #registers {
+    height: 7rem;
+  }
+
+  #bug-trap-404-modal #stack-trace {
+    height: 9rem;
+  }
+}

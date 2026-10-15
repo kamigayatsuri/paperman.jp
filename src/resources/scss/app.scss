@@ -1,0 +1,151 @@
+// bootstrap
+@use 'bootstrap/scss/bootstrap';
+
+// fontawesome のコアと変数
+@use '../fontawesome-free-7.3.1-web/scss/fontawesome';
+
+// フォント種別指定
+@use '../fontawesome-free-7.3.1-web/scss/solid';
+@use '../fontawesome-free-7.3.1-web/scss/brands';
+
+// 各ページ固有
+@use './404' as *;
+@use './mobile/404' as *;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  --bs-body-line-height: normal;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body h1 {
+  background-color: #1a5709;
+  margin-bottom: 1px !important;
+}
+
+body i {
+  color: white;
+  font-weight: normal;
+}
+
+body i.fa-angle-right{
+  background: linear-gradient(to bottom right, #60bb00, #224a01);
+  border-top: 1px solid #81f901;
+  border-right: 1px solid #1a3200;
+  border-bottom: 1px solid #1a3200;
+  border-left: 1px solid #81f901;
+  border-collapse: collapse;
+  padding: 0.05em 0.3em;
+}
+
+body i.fa-triangle-exclamation{
+  color: #ffbb00
+}
+
+body .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100%;
+}
+
+#header {
+  background-color: #c44242;
+  font-size: x-large;
+  margin-bottom: 1px !important;
+}
+
+#footer {
+  font-size: large;
+  background-color: #1a5709;
+  min-height: 100%;
+  position: relative;
+}
+
+#footer a {
+  color: white;
+}
+
+body table {
+  border-collapse: separate;
+  border-spacing: 1px;
+  border-style: none;
+}
+
+body table tbody {
+}
+
+body table tbody tr {
+}
+
+body table tbody td {
+  font-size: x-large;
+  font-weight: bold;
+  background-color: #fafad8;
+  border-bottom: 1px solid #e2debb;
+  width: 60%;
+  white-space: nowrap;
+}
+
+body table tbody td#tina404 {
+  width: 37%;
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 480px) {
+  body table {
+    background: #fff url("../img/404.jpg") no-repeat left top;
+    background-size: cover;
+  }
+
+  body table tbody td {
+    background-color: unset;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body table tbody td#tina404 {
+    display: none;
+  }
+}
+
+body img {
+  max-width: 100%;
+}
+
+#search-box {
+  background-color: #c44242;
+}
+
+#search-box .button-search {
+  background: linear-gradient(to bottom right, #81f901, #224a01 41%, #224a01);
+  border-top: 1px solid #81f901;
+  border-right: 1px solid #1a3200;
+  border-bottom: 1px solid #1a3200;
+  border-left: 1px solid #81f901;
+  outline: none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+#search-box .button-search:active {
+  background: linear-gradient(to bottom right, #81f901, #224a01 41%, #224a01);
+  border-top: 1px solid #1a3200;
+  border-right: 1px solid #81f901;
+  border-bottom: 1px solid #81f901;
+  border-left: 1px solid #1a3200;
+  color: white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+@media only screen and (min-width: 480px) {
+  #search-box input {
+    width: 48ex;
+  }
+}

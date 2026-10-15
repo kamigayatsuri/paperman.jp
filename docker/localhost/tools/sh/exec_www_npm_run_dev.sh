@@ -1,0 +1,1 @@
+docker compose exec -it -w /var/www/src www-front /usr/bin/npm --prefix /var/www/src run dev

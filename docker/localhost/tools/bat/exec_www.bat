@@ -1,0 +1,2 @@
+docker compose exec -it -w /var/www/src www-front /bin/bash
+pause
